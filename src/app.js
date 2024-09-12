@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:5173',  // Adjust the origin to match your Vue frontend
+    origin: process.env.FRONTEND_URL,  // Adjust the origin to match the Vue frontend
     credentials: true, // Allow credentials
   }));
 
